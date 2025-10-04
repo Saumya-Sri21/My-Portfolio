@@ -2,16 +2,6 @@ import { motion } from "framer-motion";
 
 const experienceData = [
   {
-    position: "Full-Stack Developer Intern",
-    company: "AlgoFlow AI",
-    companyLink: "https://www.algoflow.ai",
-    start: "Aug 2025",
-    end: "Present",
-    description: `• Contributed to an ongoing project involving API testing, debugging, and frontend integration.
-• Integrated APIs with the frontend, ensuring smooth data flow between backend services and UI.
-• Collaborated with the team to understand end-to-end architecture and improve development workflows.`,
-  },
-  {
     position: "Web Administrator",
     company: "Institute of Engineering and Technology",
     companyLink: "https://placement.ietlucknow.ac.in/tpc/contactus.html",
@@ -22,6 +12,27 @@ const experienceData = [
 • Implemented UI/UX improvements and resolved technical issues for smooth user experience.
 • Tech-Stack: HTML, CSS, JavaScript, Bootstrap.`,
   },
+   {
+    position: "Full-Stack Developer Intern",
+    company: "AlgoFlow AI",
+    companyLink: "https://www.algoflow.ai",
+    start: "Aug 2025",
+    end: "Sep 2025",
+    description: `• Contributed to an ongoing project involving API testing, debugging, and frontend integration.
+• Integrated APIs with the frontend, ensuring smooth data flow between backend services and UI.
+• Collaborated with the team to understand end-to-end architecture and improve development workflows.`,
+  },
+   {
+    position: "Frontend Developer Intern",
+    company: "IBM CSRBOX",
+    companyLink: "https://drive.google.com/file/d/1aNvK79PkvzMnpJCEDlXrS56NE9DbsPZR/view?usp=sharing",
+    start: "Jul 2025",
+    end: "Aug 2025",
+    description: `• Developed scalable UIs using React.js and TailwindCSS
+• Implemented responsive design principles to ensure smooth performance on mobile, tablet, and desktop.
+• Used version control (Git/GitHub) for collaborative development and deployment.
+• Led a team of 4 members to meet project goals.`,
+  }
 ];
 
 const ScrollReveal = ({ children }) => {

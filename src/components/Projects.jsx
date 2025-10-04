@@ -7,13 +7,15 @@ const projectsData = [
   {
     image: image1,
     title: "Pic-Match.AI",
+    link: "https://pic-match-ai.onrender.com/",
     description:
       "An intelligent web application that leverages AI to recognize and match images with ~90% accuracy, providing fast and relevant visual search results.",
-    technologies: ["React", "Tailwind CSS"],
+    technologies: ["React", "Tailwind CSS", "Python", "FastAPI", "CLIP", "FAISS", "Docker"],
   },
   {
     image: image2,
     title: "Task-Yatra",
+    link: "https://taskyatra.onrender.com",
     description:
       "A full-stack task management web application with Admin and User roles, designed to help teams and individuals organize tasks efficiently.",
     technologies: [
@@ -31,17 +33,10 @@ const projectsData = [
   {
     image: image3,
     title: "Quick-Chat",
+    link: "https://github.com/Saumya-Sri21/Quick-Chat",
     description:
       "A full-stack chat application supporting real-time messaging with WebSockets, user authentication, and online status indicators using MERN stack.",
-    technologies: [
-      "MongoDB",
-      "Express",
-      "Mongoose",
-      "React",
-      "Tailwind CSS",
-      "Node.js",
-      "Socket.io",
-    ],
+    technologies: ["MongoDB", "Express", "Mongoose", "React", "Tailwind CSS", "Node.js", "Socket.io"],
   },
 ];
 
@@ -62,11 +57,13 @@ const ProjectCard = ({ project }) => {
   return (
     <ScrollReveal>
       <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full rounded-2xl transition-transform duration-300 hover:scale-105 sm:w-[250px] md:w-[400px] lg:w-[420px]"
-        />
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full rounded-2xl transition-transform duration-300 hover:scale-105 sm:w-[250px] md:w-[400px] lg:w-[420px] cursor-pointer"
+          />
+        </a>
 
         <div className="flex flex-col gap-5 w-full md:w-[calc(100%-420px)]">
           <div className="flex flex-col gap-3">
@@ -105,6 +102,20 @@ function Project() {
         {projectsData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
+
+        {/* More Projects link after all project cards */}
+        <ScrollReveal>
+          <div className="flex justify-center mt-8">
+            <a
+              href="https://github.com/Saumya-Sri21?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-purple-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-600 transition-colors italic"
+            >
+              More Projects →
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   );
